@@ -30,7 +30,7 @@
   if( empty( $_GET["LPORT"] ) ) $opts .= ", LPORT=$lport";
 
   // Exec command
-  $cmd = $veil." -p ".escapeshellarg( $payload )." -c LHOST=$lhost, LPORT=$lport".$opts." -o $basename 2>&1";
+  $cmd = $veil." -p ".escapeshellarg( $payload )." -c LHOST=$lhost".$opts." -o $basename 2>&1";
   $out = shell_exec( $cmd );
 
   // Extract payload path
